@@ -14,7 +14,7 @@ function insertShiftArray(inmiddle, myArr) {
 }
 
 function insertShiftArraySplice(num, arr) {
-  newSpliceArr = arr.splice((Math.floor(arr.length/2)), 0, num);
+  let newSpliceArr = arr.splice((Math.floor(arr.length/2)), 0, num);
   return newSpliceArr;
 }
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "array-shift.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "lint": "eslint ./array-shift.js --fix"
   },
   "keywords": [],
   "author": "",
