@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "lint": "eslint ./challenges/arrayShift/array-shift.js --fix"
+    "lint": "eslint ./challenges/** --ext .js"
   },
   "repository": {
     "type": "git",

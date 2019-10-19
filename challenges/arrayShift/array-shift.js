@@ -18,6 +18,6 @@ function insertShiftArraySplice(num, arr) {
   return newSpliceArr;
 }
 
-// adding travis file
+// adding travis file comment
 
 module.exports = {insertShiftArray,insertShiftArraySplice};
