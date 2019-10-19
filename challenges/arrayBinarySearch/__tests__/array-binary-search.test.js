@@ -6,7 +6,6 @@ describe('Testing the array', () => {
 
   let testArr = [1,3,7,12,15];
   let testNum = 7;
-  let result = -1;
   
   it('checking the index', () => {
     let indexResult = arraySearch.binarySearch(testArr, testNum);
