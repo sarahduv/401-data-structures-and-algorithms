@@ -16,3 +16,5 @@ describe('Testing the array', () => {
     expect(newArr).toEqual(completeArr);
   });
 });
+
+//adding travis file comment
