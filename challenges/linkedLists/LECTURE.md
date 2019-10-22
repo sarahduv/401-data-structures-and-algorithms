@@ -17,4 +17,4 @@ Write the following tests:
 * Can successfully insert after a node in the middle of the linked list
 * Can successfully insert a node after the last node of the linked list
 
-[!whiteboard](https://raw.githubusercontent.com/sarahduv/401-data-structures-and-algorithms/master/assets/linked-list-1.jpg)
+![whiteboard](https://raw.githubusercontent.com/sarahduv/401-data-structures-and-algorithms/master/assets/linked-list-1.jpg)
