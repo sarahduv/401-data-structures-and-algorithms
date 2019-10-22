@@ -50,7 +50,7 @@ class LinkedList {
   } 
 
   insertAfter(value, newValue) {
-    var node = new Node(newValue)
+    var node = new Node(newValue);
     let currentNode = this.head;
 
     if(currentNode.value === value) {
@@ -71,7 +71,7 @@ class LinkedList {
   }
 }
 
-const ll = new LinkedList();
+// const ll = new LinkedList();
 // ll.head = new Node(2);
 // ll.head.next = new Node(3);
 // ll.head.next.next = new Node(4);
