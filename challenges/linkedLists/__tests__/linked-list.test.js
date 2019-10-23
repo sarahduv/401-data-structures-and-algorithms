@@ -50,4 +50,45 @@ describe('tests our nodes', () => {
     newLinkedList.insertAfter(4, 7);
     expect(newLinkedList.head.next.next.value).toEqual(7);
   });
+
+  it('Where k is greater than the length of the linked list', () => {
+    // console.log(JSON.stringify(newLinkedList));
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    newLinkedList.append(5);
+    expect(newLinkedList.kthFromEnd(0).value).toEqual(5);
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    // console.log(JSON.stringify(newLinkedList));
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    expect(newLinkedList.kthFromEnd(0).value).toEqual(3);
+  });
+
+  it('Where k is not a positive integer', () => {
+    // console.log(JSON.stringify(newLinkedList));
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    newLinkedList.append(5);
+    expect(newLinkedList.kthFromEnd(-1)).toEqual('exception');
+  });
+
+  it('Where the linked list is of a size 1', () => {
+    // console.log(JSON.stringify(newLinkedList));
+    newLinkedList.append(2);
+    expect(newLinkedList.kthFromEnd(0).value).toEqual(2);
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    // console.log(JSON.stringify(newLinkedList));
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    newLinkedList.append(5);
+    expect(newLinkedList.kthFromEnd(2).value).toEqual(3);
+  });
+
 });

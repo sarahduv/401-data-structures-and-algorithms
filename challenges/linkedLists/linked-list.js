@@ -30,13 +30,6 @@ class LinkedList {
     var node = new Node(newValue);
     let currentNode = this.head;
     let previousNode = null;
-    
-    // if(currentNode.value === value) {
-    //   node.next = currentNode;
-    //   this.head = node;
-    // } else {
-    //   currentNode = currentNode.next;
-    // }
 
     while(currentNode) {
       if(currentNode.value === value) {
@@ -71,12 +64,62 @@ class LinkedList {
     }
     this.size++;
   }
+
+  // kthFromEnd(k) {
+  //   let currentNode = this.head;
+  //   let answerNode = null;
+  //   let counter = 0;
+  //   let toggle = false;
+
+  //   while(currentNode.next !== null){
+  //     if (toggle) {
+  //       answerNode = answerNode.next;
+  //       currentNode = currentNode.next;
+  //       counter++;
+  //     } else if (counter === k){
+  //       answerNode = this.head;
+  //       toggle = true;
+  //     } else {
+  //       currentNode = currentNode.next;
+  //       counter++;
+  //     }
+  //   }
+  //   return answerNode.value === null ? null : answerNode.value;
+  // }
+
+  kthFromEnd(k) {
+    let length = 0; 
+    let current = this.head;
+    
+    while (current) {
+      length++;
+      current = current.next;
+    }
+    
+    let k_from_start = length - 1 - k;
+    if (k_from_start < 0 || k < 0) {
+      return 'exception';
+    }
+    
+    current = this.head;
+
+    while (k_from_start > 0) {
+      k_from_start--;
+      current = current.next;
+    }
+    return current;
+  }
 }
 
 // const ll = new LinkedList();
 // ll.head = new Node(2);
 // ll.head.next = new Node(3);
 // ll.head.next.next = new Node(4);
+// ll.head.next.next.next = new Node(5);
+// ll.head.next.next.next.next = new Node(6);
+
+
+// console.log(ll.kthFromEnd(8));
 
 // ll.insertBefore(3, 6);
 // ll.insertAfter(3, 11);
