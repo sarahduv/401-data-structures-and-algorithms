@@ -18,3 +18,4 @@ Write the following tests:
 * Can successfully insert a node after the last node of the linked list
 
 ![whiteboard](https://raw.githubusercontent.com/sarahduv/401-data-structures-and-algorithms/master/assets/linked-list-1.jpg)
+![whiteboard2](https://github.com/sarahduv/401-data-structures-and-algorithms/blob/master/assets/linked-list2.jpg?raw=true)
