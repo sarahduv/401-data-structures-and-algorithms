@@ -4,9 +4,15 @@
   "description": "",
   "main": "linked-list.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "lint": "eslint '**/*.js'"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.8.0",
+    "eslint": "^6.5.1",
+    "lint": "^0.7.0"
+  }
 }
