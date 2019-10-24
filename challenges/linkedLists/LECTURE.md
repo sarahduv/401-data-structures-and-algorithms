@@ -33,3 +33,14 @@ Write the following tests:
 
 
 ![whiteboard2](https://github.com/sarahduv/401-data-structures-and-algorithms/blob/master/assets/linked-list2.jpg?raw=true)
+
+Write the following method for the Linked List class:
+
+* Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+Write the following tests:
+
+* It will return the first value of the second list as the second value in the new list
+* It will return the second value of the second list as the third value in the new list
+
+![whiteboard3](https://github.com/sarahduv/401-data-structures-and-algorithms/blob/master/assets/linked-list3.jpg?raw=true)
