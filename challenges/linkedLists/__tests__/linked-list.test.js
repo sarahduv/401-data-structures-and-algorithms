@@ -24,7 +24,6 @@ describe('tests our nodes', () => {
     newLinkedList.append(2);
     newLinkedList.append(4);
     newLinkedList.insertBefore(4, 3);
-    // console.log(JSON.stringify(newLinkedList));
     expect(newLinkedList.head.next.value).toEqual(3);
   });
 
@@ -39,12 +38,10 @@ describe('tests our nodes', () => {
     newLinkedList.append(2);
     newLinkedList.append(4);
     newLinkedList.insertAfter(2, 3);
-    // console.log(JSON.stringify(newLinkedList));
     expect(newLinkedList.head.next.value).toEqual(3);
   });
 
   it('Can successfully insert a node after the last node of the linked list', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     newLinkedList.append(4);
     newLinkedList.insertAfter(4, 7);
@@ -52,7 +49,6 @@ describe('tests our nodes', () => {
   });
 
   it('Where k is greater than the length of the linked list', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     newLinkedList.append(3);
     newLinkedList.append(4);
@@ -61,14 +57,12 @@ describe('tests our nodes', () => {
   });
 
   it('Where k and the length of the list are the same', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     newLinkedList.append(3);
     expect(newLinkedList.kthFromEnd(0).value).toEqual(3);
   });
 
   it('Where k is not a positive integer', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     newLinkedList.append(3);
     newLinkedList.append(4);
@@ -77,13 +71,11 @@ describe('tests our nodes', () => {
   });
 
   it('Where the linked list is of a size 1', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     expect(newLinkedList.kthFromEnd(0).value).toEqual(2);
   });
 
   it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
-    // console.log(JSON.stringify(newLinkedList));
     newLinkedList.append(2);
     newLinkedList.append(3);
     newLinkedList.append(4);
@@ -91,4 +83,31 @@ describe('tests our nodes', () => {
     expect(newLinkedList.kthFromEnd(2).value).toEqual(3);
   });
 
+  it('It will return the first value of the second list as the second value in the new list', () => {
+    let newLinkedListTwo = new LinkedList();
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    newLinkedListTwo.append(5);
+    newLinkedListTwo.append(6);
+    newLinkedListTwo.append(7);
+    newLinkedListTwo.append(8);
+    let zippedList = newLinkedList.mergeLinkedList(newLinkedListTwo);
+    expect(zippedList.next.value).toEqual(5);
+  });
+
+  it('It will return the second value of the second list as the third value in the new list', () => {
+    let newLinkedListThree = new LinkedList();
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    newLinkedListThree.append(5);
+    newLinkedListThree.append(6);
+    newLinkedListThree.append(7);
+    newLinkedListThree.append(8);
+    let zippedList = newLinkedList.mergeLinkedList(newLinkedListThree);
+    expect(zippedList.next.next.value).toEqual(2);
+  });
 });

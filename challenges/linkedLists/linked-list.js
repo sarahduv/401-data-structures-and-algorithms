@@ -84,7 +84,6 @@ class LinkedList {
   //       counter++;
   //     }
   //   }
-  //   return answerNode.value === null ? null : answerNode.value;
   // }
 
   kthFromEnd(k) {
@@ -109,6 +108,23 @@ class LinkedList {
     }
     return current;
   }
+  
+  mergeLinkedList(list2) {
+    let current1 = this.head;
+    let current2 = list2.head;
+    let zipped = new LinkedList();
+    while (current1 || current2) {
+      if (current1) {
+        zipped.append(current1.value);
+        current1 = current1.next;
+      } 
+      if (current2) {
+        zipped.append(current2.value);
+        current2 = current2.next;
+      }
+    } 
+    return zipped.head;
+  }
 }
 
 // const ll = new LinkedList();
@@ -118,13 +134,14 @@ class LinkedList {
 // ll.head.next.next.next = new Node(5);
 // ll.head.next.next.next.next = new Node(6);
 
+// const nn = new LinkedList();
+// nn.head = new Node(7);
+// nn.head.next = new Node(8);
+// nn.head.next.next = new Node(9);
+// nn.head.next.next.next = new Node(10);
+// nn.head.next.next.next.next = new Node(11);
 
-// console.log(ll.kthFromEnd(8));
+// console.log('linked list', JSON.stringify(ll.mergeLinkedList(nn)));
 
-// ll.insertBefore(3, 6);
-// ll.insertAfter(3, 11);
-
-// console.log('linked list', JSON.stringify(ll.head));
-// console.log(' linked list length', ll);
 
 module.exports = LinkedList;
