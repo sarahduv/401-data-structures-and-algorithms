@@ -110,4 +110,55 @@ describe('tests our nodes', () => {
     let zippedList = newLinkedList.mergeLinkedList(newLinkedListThree);
     expect(zippedList.next.next.value).toEqual(2);
   });
+
+  it('Can successfully instantiate an empty linked list', () => {
+    newLinkedList = new LinkedList();
+    expect(newLinkedList.head).toBe(null);
+  });
+
+  it('Can properly insert into the linked list where the linked list is of a size 1', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    expect(newLinkedList.size).toEqual(2);
+    expect(newLinkedList.head.next.value).toEqual(2);
+  });
+
+  it('The head property will properly point to the first node in the linked list', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    expect(newLinkedList.head.next.value).toEqual(2);
+  });
+
+  it('Can properly insert multiple nodes into the linked list', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    expect(newLinkedList.size).toEqual(4);
+  });
+
+  it('Will return true when finding a value within the linked list that exists', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    expect(newLinkedList.includes(3)).toBe(true);
+  });
+
+  it('Will return false when searching for a value in the linked list that does not exist', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    expect(newLinkedList.includes(5)).toBe(false);
+  });
+  
+  it('Can properly return a collection of all the values that exist in the linked list', () => {
+    newLinkedList.append(1);
+    newLinkedList.append(2);
+    newLinkedList.append(3);
+    newLinkedList.append(4);
+    expect(newLinkedList.toString()).toEqual(' 1 2 3 4')
+  });
 });
+
