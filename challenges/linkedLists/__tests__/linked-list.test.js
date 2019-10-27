@@ -158,7 +158,7 @@ describe('tests our nodes', () => {
     newLinkedList.append(2);
     newLinkedList.append(3);
     newLinkedList.append(4);
-    expect(newLinkedList.toString()).toEqual(' 1 2 3 4')
+    expect(newLinkedList.toString()).toEqual(' 1 2 3 4');
   });
 });
 

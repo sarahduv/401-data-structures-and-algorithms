@@ -49,7 +49,7 @@ class LinkedList {
     return false;
   }
 
-  toString(list) {
+  toString() {
     let currentNode = this.head;
     let stringOfLinkedList = '';
 
