@@ -26,6 +26,40 @@ class LinkedList {
     this.size++;
   }
 
+  appendAtHead(value) {
+    if (this.head === null) {
+      this.head = new Node(value);
+    } else {
+      let oldHeadNode = this.head;
+      this.head = new Node(value);
+      this.head.next = oldHeadNode;
+    }
+    return this.head;
+  }
+
+  includes(value) {
+    let node = this.head;
+    while(node){
+      if(node.value === value) {
+        return true;
+      } else {
+        node = node.next;
+      }
+    }
+    return false;
+  }
+
+  toString() {
+    let currentNode = this.head;
+    let stringOfLinkedList = '';
+
+    while(currentNode){
+      stringOfLinkedList += ` ${currentNode.value}`;
+      currentNode = currentNode.next;
+    }
+    return stringOfLinkedList;
+  }
+
   insertBefore(value, newValue) {
     var node = new Node(newValue);
     let currentNode = this.head;
@@ -141,7 +175,7 @@ class LinkedList {
 // nn.head.next.next.next = new Node(10);
 // nn.head.next.next.next.next = new Node(11);
 
-// console.log('linked list', JSON.stringify(ll.mergeLinkedList(nn)));
+// console.log('linked list', JSON.stringify(ll.mergeLinkedList(nn)));  
 
 
 module.exports = LinkedList;
