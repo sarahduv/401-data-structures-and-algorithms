@@ -6,7 +6,7 @@
 * enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
 * dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
-###Testing
+### Testing
 * Can successfully add a cat to the stack
 * Can successfully add a dog to the stack
 * Can successfully remove a dog from the stack
