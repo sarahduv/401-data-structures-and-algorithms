@@ -9,11 +9,11 @@
 * Curly Brackets : {}
 
 #### Examples:
-let str1 = '{}[]()[()]'; // should return true
-let str2 = '[[))}{'; // should return false
-let str3 = '[[[]]]({[]})[]'; // should return true
-let str4 = '}{)([[[]'; // should return false
-let str5 = '[[[]]]({[hello]})[]'; // should return true
+- let str1 = '{}[]()[()]'; // should return true
+- let str2 = '[[))}{'; // should return false
+- let str3 = '[[[]]]({[]})[]'; // should return true
+- let str4 = '}{)([[[]'; // should return false
+- let str5 = '[[[]]]({[hello]})[]'; // should return true
 
 #### Testing:
 * Can successfully return true if all brackets are balanced and matching
