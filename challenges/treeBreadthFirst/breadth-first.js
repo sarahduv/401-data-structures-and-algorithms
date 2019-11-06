@@ -14,6 +14,13 @@ class Node {
   }
 }
 
+class Queue {
+  constructor() { this.top = []; }
+  dequeue() { return this.top.shift(); }
+  enqueue(val) { this.top.push(val); }
+  size() { return this.top.length; }
+}
+
 class BinarySearchTree extends BinaryTree {
 
   add(value){
@@ -45,24 +52,21 @@ class BinarySearchTree extends BinaryTree {
     }
   }
 
-  fizzBuzzTree(current){
-    if (current == null) {
-      return;
+  breadthFirstTraversal(current) {
+    const q = new Queue();
+    let output = [];
+    q.enqueue(current);
+
+    while (q.size() > 0) {
+      const current = q.dequeue();
+      output.push(current.value);
+      console.log(current.value);
+      if (current.left !== null) { q.enqueue(current.left); }
+      if (current.right !== null) { q.enqueue(current.right); } 
     }
-    if (current.value %3 === 0 && current.value %5 === 0) {
-      current.value = 'FizzBuzz';
-    } else if (current.value %3 === 0) {
-      current.value = 'Fizz';
-    } else if (current.value %5 === 0) {
-      current.value = 'Buzz';
-    }
-    
-    this.fizzBuzzTree(current.right);
-    this.fizzBuzzTree(current.left);
+    return output;
   }
 }
-
-module.exports = {BinaryTree, BinarySearchTree, Node};
 
 // const tree = new BinarySearchTree(null);
 // tree.add(10);
@@ -72,38 +76,8 @@ module.exports = {BinaryTree, BinarySearchTree, Node};
 // tree.add(15);
 // tree.add(12);
 
-// tree.fizzBuzzTree(tree.root)
-// console.log(tree.root);
+// console.log('this is the tree', tree);
 
+// tree.breadthFirstTraversal(tree.root);
 
-/**
- * 
- * // Language diagnostic method:
- * 
- * function fizzBuzzTree (tree) {
- *  if (tree === null) {
- *    return;
- *  }
- *  traverse(tree.root);
- * } 
- * 
- * function traverse(node){
- *  // BASE CASE
- *  if (node === null) {
- *    return;
- *  }
- * 
- *  if (node.value %3 === 0 && node.value %5 === 0){
- *    node.value = 'FizzBuzz';
- *  } else if (node.value %3 === 0) {
- *    node.value = 'Fizz';
- *  } else if (node.value %5 === 0) {
- *    node.value = 'Buzz';
- *  }
- * 
- *  traverse(node.left);
- *  traverse(node.right);
- */
-
-
-
+module.exports = {BinaryTree, BinarySearchTree, Node, Queue};
