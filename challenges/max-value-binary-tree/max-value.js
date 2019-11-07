@@ -1,7 +1,5 @@
 'use strict';
 
-let answer = null;
-
 class BinaryTree {
   constructor(root = null) {
     this.root = root === null ? null : new Node(root);
@@ -61,10 +59,10 @@ class BinarySearchTree extends BinaryTree {
     return Math.max(
       this.findMaxValue(current.right),
       this.findMaxValue(current.left),
-      current.value,
-    )
+      current.value
+    );
   }
-
+  
   findMaxValueTwo(current){
     if (current === null){
       return null;

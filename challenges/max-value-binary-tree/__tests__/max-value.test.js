@@ -35,7 +35,7 @@ describe(`tree traversal`, () => {
     tree.add(16);
     tree.add(13);
     expect(tree.findMaxValueTwo(tree.root)).toBe(16);
-  })
+  });
 
   it('Can successfully find the highest value in the tree', () => {
     const tree = new BinarySearchTree(null);
