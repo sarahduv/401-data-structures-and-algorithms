@@ -65,6 +65,35 @@ class BinarySearchTree extends BinaryTree {
     if (current.right !== null) {this.findMaxValue(current.right);}
     return answer;
   }
+
+  findMaxValueTwo(current){
+    if (current === null){
+      return null;
+    }
+
+    const val1 = this.findMaxValue(current.left);
+    const val2 = this.findMaxValue(current.right);
+    const val3 = current.value;
+
+    // Is val1 bigger than both
+    if (
+      (val2 === null || val1 >= val2) && 
+      (val3 === null || val1 >= val3)
+    ) { 
+      return val1; 
+    }
+
+    // Is val2 bigger than both?
+    if (
+      (val1 === null || val2 >= val1) && 
+      (val3 === null || val2 >= val3)
+    ) { 
+      return val2; 
+    }
+
+    // Then val 3 is the biggest
+    return val3;
+  }
 }
 
 // const tree = new BinarySearchTree(null);

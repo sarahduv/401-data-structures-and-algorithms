@@ -23,7 +23,7 @@ describe(`tree traversal`, () => {
     tree.add(7);
     tree.add(15);
     tree.add(12);
-    expect(tree.findMaxValue(tree.root)).toBe(15);
+    expect(tree.findMaxValueTwo(tree.root)).toBe(15);
   });
 
   it('Can successfully find the highest value in the tree', () => {
@@ -34,7 +34,29 @@ describe(`tree traversal`, () => {
     tree.add(8);
     tree.add(16);
     tree.add(13);
-    expect(tree.findMaxValue(tree.root)).toBe(16);
+    expect(tree.findMaxValueTwo(tree.root)).toBe(16);
+  })
+
+  it('Can successfully find the highest value in the tree', () => {
+    const tree = new BinarySearchTree(null);
+    tree.add(10);
+    tree.add(5);
+    tree.add(2);
+    tree.add(7);
+    tree.add(20);
+    tree.add(12);
+    expect(tree.findMaxValue(tree.root)).toBe(20);
+  });
+
+  it('Can successfully find the highest value in the tree', () => {
+    const tree = new BinarySearchTree(null);
+    tree.add(11);
+    tree.add(6);
+    tree.add(3);
+    tree.add(8);
+    tree.add(30);
+    tree.add(13);
+    expect(tree.findMaxValue(tree.root)).toBe(30);
   });
 });
 
