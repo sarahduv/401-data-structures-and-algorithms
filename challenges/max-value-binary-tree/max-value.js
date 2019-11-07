@@ -56,14 +56,13 @@ class BinarySearchTree extends BinaryTree {
   
   findMaxValue(current){
     if (current === null){
-      return;
+      return null;
     }
-    if (current.value > answer){
-      answer = current.value;
-    }
-    if (current.left !== null) {this.findMaxValue(current.left);}
-    if (current.right !== null) {this.findMaxValue(current.right);}
-    return answer;
+    return Math.max(
+      this.findMaxValue(current.right),
+      this.findMaxValue(current.left),
+      current.value,
+    )
   }
 
   findMaxValueTwo(current){
