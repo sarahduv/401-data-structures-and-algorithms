@@ -22,7 +22,7 @@ const insertionSort = (arr) => {
     arr[j+1] = temp;
   }
   return arr;
-}
+};
 
 // Pass #1
 // - In interation number one, we are on are number 8 in the array. We assign out j and temp values (j = -1 , temp = 8). We do not enter the while loop because the while conditions do not yet apply. We then make our arr[j+1] equal to the temp value (temp = 8). Nothing is moved in the array at this point because we do not yet have anything to compare the number 8 to.
