@@ -27,3 +27,9 @@
 
 **Time / Big O**
 - Since we are running through each item in the array, we are already at o(n). However, we also have a while loop. The worst case for this while loop is a reversed array, which would require us going over each item yet again to insert the number in the correct index. Therefore, we are at n*n --> BigO = o(n^2).
+
+**Testing**
+- Can successfully sort and array
+- Can successfully sort an array with duplicate values
+- Can successfully sort an array that is in reverse
+- Can successfully return the array even if it is already sorted
