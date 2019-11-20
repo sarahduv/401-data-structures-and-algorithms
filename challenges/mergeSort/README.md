@@ -38,4 +38,5 @@ MERGED [ 4, 8, 15, 16, 23, 42 ]
 - On our last pass, we are repeating the same process as above, which results in a fully sorted array.
 
 ### Final Result
+A sorted array:
 [ 4, 8, 15, 16, 23, 42 ]
