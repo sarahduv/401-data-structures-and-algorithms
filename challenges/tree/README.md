@@ -13,6 +13,13 @@
 ### Structure and Testing
 - Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
+### Code challenge #32 addition
+- Write a function called tree_intersection that takes two binary tree parameters.
+- Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+- I utilized the preOrder function in the tree class to traverse the two trees. The function will successfully return the like-values of each tree.
+- Big O of time is O(n^2) - We are traversing over each tree once, and also again when we are comparing the values the the preOrder function gave us. 
+- Big O of space is O(n+n) --> O(n) - We are creating two new arrays in memory that contain the values of each node of each tree.
+
 ### Write tests to prove the following functionality:
 
 - Can successfully instantiate an empty tree
@@ -21,3 +28,4 @@
 - Can successfully return a collection from a preorder traversal
 - Can successfully return a collection from an inorder traversal
 - Can successfully return a collection from a postorder traversal
+- Can successfully return like values from two different trees
