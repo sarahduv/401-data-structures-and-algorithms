@@ -1,6 +1,6 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
-const {BinarySearchTree, BinaryTree, Node} = require('../tree.js');
+const {BinarySearchTree, BinaryTree, Node, intersectTrees} = require('../tree.js');
 
 
 describe(`tree traversal`, () => {
@@ -55,6 +55,57 @@ describe(`tree traversal`, () => {
     tree.add(15);
     tree.add(12);
     expect(tree.postOrder()).toEqual([ 2, 7, 5, 12, 15, 10 ]);
+  });
+
+  it('Can successfully return an array of like-values in two trees', () => {
+    const tree = new BinarySearchTree(null);
+    const treeTwo = new BinarySearchTree(null);
+    tree.add(10);
+    tree.add(5);
+    tree.add(2);
+    tree.add(7);
+    treeTwo.add(10);
+    treeTwo.add(5);
+    treeTwo.add(2);
+    treeTwo.add(7);
+    treeTwo.add(15);
+    treeTwo.add(12);
+
+    expect(intersectTrees(tree, treeTwo)).toEqual([ 10, 5, 2, 7 ]);
+  });
+
+  it('Can successfully return an array of like-values in two trees', () => {
+    const tree = new BinarySearchTree(null);
+    const treeTwo = new BinarySearchTree(null);
+    tree.add(10);
+    tree.add(2);
+    tree.add(3);
+    tree.add(11);
+    treeTwo.add(10);
+    treeTwo.add(5);
+    treeTwo.add(2);
+    treeTwo.add(7);
+    treeTwo.add(15);
+    treeTwo.add(12);
+
+    expect(intersectTrees(tree, treeTwo)).toEqual([ 10, 2 ]);
+  });
+
+  it('Can successfully return an array of like-values in two trees', () => {
+    const tree = new BinarySearchTree(null);
+    const treeTwo = new BinarySearchTree(null);
+    tree.add(100);
+    tree.add(50);
+    tree.add(200);
+    tree.add(11);
+    treeTwo.add(10);
+    treeTwo.add(5);
+    treeTwo.add(2);
+    treeTwo.add(7);
+    treeTwo.add(100);
+    treeTwo.add(12);
+
+    expect(intersectTrees(tree, treeTwo)).toEqual([ 100 ]);
   });
 });
 

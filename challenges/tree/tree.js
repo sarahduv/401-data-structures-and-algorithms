@@ -111,6 +111,12 @@ class BinarySearchTree extends BinaryTree {
 }
 
 
+function intersectTrees(t1, t2) {
+  const preorder1 = t1.preOrder();
+  const preorder2 = t2.preOrder();
+  return preorder1.filter(x => preorder2.includes(x));
+}
+
 
 // const root = new Node('+');
 // root.left = new Node('*');
@@ -137,5 +143,5 @@ class BinarySearchTree extends BinaryTree {
 // console.log(tree.inOrder());
 // console.log(tree.postOrder());
 
-module.exports = {BinarySearchTree, BinaryTree, Node};
+module.exports = {BinarySearchTree, BinaryTree, Node, intersectTrees};
 
