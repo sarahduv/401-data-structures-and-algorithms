@@ -33,7 +33,7 @@ console.log('empty stack:', emptyStack)
 console.log('regular stack:', st.top);
 
 
-console.log('******** Find Max ********')
+console.log('******** Find Max Value ********')
 
 function findMaxValue(originalStack){
   if (originalStack === null) {
