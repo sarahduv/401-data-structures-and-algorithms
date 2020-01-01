@@ -1,0 +1,16 @@
+{
+  "name": "arrayShift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array-shift.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ./array-shift.js --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

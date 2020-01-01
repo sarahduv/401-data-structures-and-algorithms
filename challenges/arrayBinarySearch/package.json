@@ -1,0 +1,19 @@
+{
+  "name": "arrayBinarySearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array-binary-search.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint './array-binary-search.js' --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lint": "^0.7.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
