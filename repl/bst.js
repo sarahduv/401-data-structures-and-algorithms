@@ -116,5 +116,31 @@ function isXPresent(current, target){
 console.log(isXPresent(treeEmpty.root, 10));
 console.log(isXPresent(tree.root, 10));
 
+console.log('******** Does path-value exists ********')
+// Does a root to leaf path add up to a given target value
 
+var hasPathSum = function(root, sum) {
+    let addition = 0;
+    return sumExist(root, sum, addition);
+};
 
+function sumExist(node, sum, tally){
+    if(tally > sum){
+        return false;
+    }
+
+    if(node === null && tally === sum){
+        return true;
+    }
+
+    if(node === null){
+      return false;
+    }
+
+    tally += node.value;
+
+    return sumExist(node.left, sum, tally) ||
+            sumExist(node.right, sum, tally);
+}
+
+console.log(hasPathSum(tree.root, 37));
