@@ -75,3 +75,22 @@ console.log(sumOfElements(treeEmpty.root));
 console.log(sumOfElements(tree.root));
 
 
+console.log('******** Find Max Val ********')
+
+function findMaxVal(current){
+  if(current === null){
+    return 'this tree is empty';
+  }
+  let maxVal = current.value;
+
+  while(current){
+    maxVal = current.value;
+    current = current.right;
+  }
+  return maxVal;
+}
+
+console.log(findMaxVal(treeEmpty.root));
+console.log(findMaxVal(tree.root));
+
+
