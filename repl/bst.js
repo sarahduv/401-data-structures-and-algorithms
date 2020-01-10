@@ -93,4 +93,28 @@ function findMaxVal(current){
 console.log(findMaxVal(treeEmpty.root));
 console.log(findMaxVal(tree.root));
 
+console.log('******** Is X Present ********')
+
+function isXPresent(current, target){
+  if (current === null){
+    return false;
+  }
+  if (current.value === target){
+    return true;
+  }
+
+  if(target < current.value){
+    return this.isXPresent(current.left, target);
+  }
+
+  if(target > current.value){
+    return this.isXPresent(current.right, target);
+  }
+  
+}
+
+console.log(isXPresent(treeEmpty.root, 10));
+console.log(isXPresent(tree.root, 10));
+
+
 
