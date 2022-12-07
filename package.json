@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "eslint": "^6.5.1",
-    "lint": "^0.7.0"
+    "lint": "^0.8.8"
   }
 }
